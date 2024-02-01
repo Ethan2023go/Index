@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Expanding Animation</title>
+    <!-- vivus svg -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" referrerpolicy="no-referrer"></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+    <!-- bootstrap -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
+    <!-- 引入 gsap 主程式 -->
+    <!-- <script src="./gsap/gsap.js"></script> -->
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* background-color: lightblue; */
+            /* background-image: url(https://picsum.photos/1920/1080/?random=${index});  */
+            /* background-image: url(./img/Baldurs\ Gate\ 3_cha_2.jpg); */
+        }
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: brown;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            left: 38%;
+            top: 30%;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            border-radius: 50%;
+            animation: expand 2s ease-out;
+            animation-delay: 3s;
+            opacity: 0;
+        }
+        .top_word{
+            z-index: 10;
+        }
+
+        @keyframes expand {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(20);
+                opacity: 0;
+            }
+        }
+        .img{
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+        
+<body>
+    <div class="all">
+    <div class="overlay">
+        <img class="top_word" src="./img/2222_animated.svg" alt="" srcset="">
+        <div class="circle">
+            
+        </div>
+    </div>
+    <!-- Your content goes here -->
+     </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        createExpandingCircle();
+    });
+
+    function createExpandingCircle() {
+        const overlay = document.querySelector('.overlay');
+        const circle = document.createElement('div');
+        // 在overplay裡創建一個 叫circle的div 
+        circle.classList.add('circle');
+        // 在circle div裡面 加入class="circle"
+        overlay.appendChild(circle);
+        // 將創好的circle div 放入 div overplay 裡
+    }
+
+      
+        $(document).ready(function() {
+            // 圖片來源的數組（可以根據需要替換成你的圖片 URL）
+            var imageSources = [
+                './img/dark_souls_view.jpg',
+                './img/bg3_party.jpg',
+                './img/Alan.png',
+                // 添加更多圖片 URL ...
+            ];
+
+            // 隨機選擇圖片 URL
+            var randomIndex = Math.floor(Math.random() * imageSources.length);
+            var randomImageUrl = imageSources[randomIndex];
+
+            // 創建圖片元素並插入 body 中
+            var imageElement = $('<img>').attr('src', randomImageUrl);
+            $('.all').append(imageElement);
+        });
+    
+
+</script>
+
+</html>

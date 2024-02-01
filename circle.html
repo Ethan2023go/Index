@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+ .circle1 {
+  width: 1000px;
+  height: 1000px;
+  border-style: dashed;
+  border-radius: 50%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .circle2 {
+  width: 700px;
+  height: 700px;
+  border-style: dashed;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .circle3 {
+  width: 300px;
+  height: 300px;
+  border-style: dashed;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#circle1 {
+  animation: rotate1 10s linear infinite forwards;
+}
+
+#circle2 {
+  animation: rotate2 15s linear infinite forwards;
+}
+
+#circle3 {
+  animation: rotate3 20s linear infinite forwards;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="circle1" id="circle1">
+        <button>123</button>
+        
+        <div class="circle2" id="circle2">
+            <button>456</button>
+            
+            <div class="circle3" id="circle3">
+                <button>789</button>
+            </div> 
+        </div>
+    </div>
+   
+     
+    </div>
+  </body>
+</html>

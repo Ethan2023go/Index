@@ -1,0 +1,51 @@
+
+<style>
+.puff-in-center {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+          
+	-webkit-animation: puff-in-center 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) 1s ;
+	        animation: puff-in-center 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) 1s ;
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+</style>
+
+<body>
+ <div class="puff-in-center">
+
+ </div>   
+
+</body>
