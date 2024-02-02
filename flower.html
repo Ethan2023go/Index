@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./f.css">
+</head>
+    <style>
+    .container-flower {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: -1;
+    background-color: hsl(0, 0%, 92%);
+
+  }
+
+    </style>
+
+<body>
+    <div class="container-flower">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+      </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const flowers = document.querySelectorAll(".flower");
+    flowers.forEach((flower) => {
+      flower.style.setProperty("--speed", (2 + 2 * Math.random()) + "s");
+      flower.style.setProperty("--transform", "scale(" + (0.4 + 0.5 * Math.random()) + ")");
+      flower.style.setProperty("--stem", (110 + 40 * Math.random()));
+      flower.style.setProperty("--flower", (250 + 180 * Math.random()));
+    });
+  </script>
+
+
+</html>

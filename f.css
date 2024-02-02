@@ -1,0 +1,82 @@
+.flower {
+    animation: swing var(--speed) ease infinite alternate both;
+    position: relative;
+    transform-origin: 50% 100%;
+    width: 2rem;
+  
+    &::before {
+        animation: before 3s ease infinite alternate both;
+        /* bottom: 7rem; */
+        content: "✿";
+        color: hsl(var(--flower), 80%, 70%);
+        font-size: 4rem;
+        left: 0;
+        position: absolute;
+        -webkit-text-stroke: 3px;
+    }
+  
+    &::after {
+        bottom: -5rem;
+        color: hsl(var(--stem), 50%, 60%);
+        content: "(";
+        font-size: 5rem;
+        font-weight: bold;
+        left: 0;
+        position: absolute;
+        transform: rotate(60deg) skew(60deg) scale(1.2, 1.8);
+    }
+  }
+  
+  .flower:nth-child(3n) {
+    animation: swingLeft var(--speed) ease infinite alternate both;
+  
+    &::before {
+        animation: beforeLeft var(--speed) ease infinite alternate both;
+    }
+  
+    &::after {
+        content: ")";
+        left: 1.5rem;
+        bottom: -4.5rem;
+    }
+  }
+  
+  @keyframes swingLeft {
+    0% {
+        transform: var(--transform) rotate(0deg);
+    }
+  
+    100% {
+        transform: var(--transform) rotate(7deg);
+    }
+  }
+  
+  @keyframes beforeLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+  
+    100% {
+        transform: rotate(7deg);
+    }
+  }
+  
+  @keyframes swing {
+    0% {
+        transform: var(--transform) rotate(0deg);
+    }
+  
+    100% {
+        transform: var(--transform) rotate(-7deg);
+    }
+  }
+  
+  @keyframes before {
+    0% {
+        transform: rotate(0deg);
+    }
+  
+    100% {
+        transform: rotate(-7deg);
+    }
+  }
