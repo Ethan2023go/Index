@@ -20,9 +20,6 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            /* background-color: lightblue; */
-            /* background-image: url(https://picsum.photos/1920/1080/?random=${index});  */
-            /* background-image: url(./img/Baldurs\ Gate\ 3_cha_2.jpg); */
         }
         .all{
             width: 100%;
@@ -65,7 +62,7 @@
                 opacity: 0;
             }
         }
-        .img{
+        .imgs{
             width: 100%;
             height: 100vh;
         }
@@ -83,6 +80,7 @@
     <!-- Your content goes here -->
      </div>
 </body>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -106,15 +104,14 @@
                 './img/dark_souls_view.jpg',
                 './img/bg3_party.jpg',
                 './img/Alan.png',
-                // 添加更多圖片 URL ...
             ];
 
-            // 隨機選擇圖片 URL
+            // 隨機選擇圖片
             var randomIndex = Math.floor(Math.random() * imageSources.length);
             var randomImageUrl = imageSources[randomIndex];
 
             // 創建圖片元素並插入 body 中
-            var imageElement = $('<img>').attr('src', randomImageUrl);
+            var imageElement = $('<img class="imgs">').attr('src', randomImageUrl);
             $('.all').append(imageElement);
         });
     
